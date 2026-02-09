@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.6</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>io.openlineage</groupId>
+    <artifactId>spring-batch-ol-parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Spring Batch OpenLineage - Parent</name>
+
+    <properties>
+        <java.version>17</java.version>
+        <openlineage-java.version>1.24.2</openlineage-java.version>
+    </properties>
+
+    <modules>
+        <module>spring-batch-openlineage</module>
+        <module>spring-batch-openlineage-demo</module>
+    </modules>
+</project>
