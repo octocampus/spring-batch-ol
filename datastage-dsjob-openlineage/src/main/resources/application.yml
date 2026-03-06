@@ -1,0 +1,19 @@
+datastage:
+  ds-home: ${DSHOME:/opt/IBM/InformationServer/Server/DSEngine}
+  projects:
+    - ${DATASTAGE_PROJECT:dstage1}
+  dsx-directory: ${DATASTAGE_DSX_DIR:}
+  polling:
+    interval: PT30S
+    run-retention: PT2H
+
+openlineage:
+  enabled: true
+  namespace: datastage
+  transport: console
+  http:
+    url: http://localhost:5000
+
+logging:
+  level:
+    io.openlineage.datastage.dsjob: DEBUG

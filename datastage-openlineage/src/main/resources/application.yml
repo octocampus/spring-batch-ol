@@ -1,0 +1,21 @@
+datastage:
+  api-key: ${DATASTAGE_API_KEY:}
+  service-url: https://api.dataplatform.cloud.ibm.com
+  project-id: ${DATASTAGE_PROJECT_ID:}
+  polling:
+    interval: PT30S
+    run-retention: PT2H
+
+openlineage:
+  enabled: true
+  namespace: datastage
+  transport: console
+  http:
+    url: http://localhost:5000
+
+server:
+  port: 8081
+
+logging:
+  level:
+    io.openlineage.datastage: DEBUG
