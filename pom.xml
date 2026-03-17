@@ -27,5 +27,6 @@
         <module>spring-batch-openlineage-demo</module>
         <module>datastage-openlineage</module>
         <module>datastage-dsjob-openlineage</module>
+        <module>datastage-dsodb-openlineage</module>
     </modules>
 </project>

@@ -1,0 +1,36 @@
+datastage:
+  dsodb:
+    url: ${DSODB_JDBC_URL:}
+    username: ${DSODB_USERNAME:dsadm}
+    password: ${DSODB_PASSWORD:}
+    driver-class-name: com.ibm.db2.jcc.DB2Driver
+    schema: ${DSODB_SCHEMA:DSODB}
+  xmeta:
+    enabled: ${XMETA_ENABLED:false}
+    url: ${XMETA_JDBC_URL:}
+    username: ${XMETA_USERNAME:xmeta}
+    password: ${XMETA_PASSWORD:}
+    driver-class-name: com.ibm.db2.jcc.DB2Driver
+    schema: ${XMETA_SCHEMA:IAVIEWS}
+  projects:
+    - ${DATASTAGE_PROJECT:dstage1}
+  dsx-directory: ${DATASTAGE_DSX_DIR:}
+  polling:
+    interval: PT30S
+    run-retention: PT2H
+    lookback: PT10M
+
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+openlineage:
+  enabled: true
+  namespace: datastage
+  transport: console
+  http:
+    url: http://localhost:5000
+
+logging:
+  level:
+    io.openlineage.datastage.dsodb: DEBUG
