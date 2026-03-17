@@ -15,6 +15,8 @@ datastage-openlineage/             # DataStage poller for Cloud Pak for Data (Sa
 datastage-dsjob-openlineage/       # DataStage poller for on-premise 11.7 via dsjob CLI
 ```
 
+> **DataStage modules** are documented in detail in [DATASTAGE.md](DATASTAGE.md) — architecture, what we capture, limitations, deployment guide, example events, and meeting prep questions.
+
 ---
 
 ## Module 1: spring-batch-openlineage
